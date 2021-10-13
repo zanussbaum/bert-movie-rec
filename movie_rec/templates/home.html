@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+<div class="container-fluid">
+  <div class="row" style="margin-top: 20px">
+    {% for movie in movies %}
+    <div class="col-md-2 col-sm-3 col-xs-6"">
+      <a href="{{ url_for('recommend', movie_id=movie) }}">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='covers/' + movie + '.jpg') }}"
+          style="width: 140px; margin-top: 5%;"
+          loading="lazy"
+        />
+      </a>
+      <p>
+        {{ movie_names[loop.index0] }}
+      </p>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+</div>
+{% endblock %}

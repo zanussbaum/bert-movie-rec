@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta name="description" content="" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>MovieRecommendations</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+          <div class="container-fluid" id="nav-fluid">
+          <div class="navbar-header">
+          <a class="navbar-brand" ">MovieRecommendations</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          </div>
+        </div>
+        </nav>
+      </header>
+      <div class="container">
+
+      <form action="/search" method="POST">
+        <div class="form-row align-items-center" style="justify-content: center; margin-top: 20px;">
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInput">name</label>
+            <input type="text" class="form-control " id="inlineFormInput" placeholder="Search for Movies">
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary">
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+      </div>
+      <div class="main_content project">
+       
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+    </div>
+    <footer
+      style="padding-top: 20px; margin-top: 20px; padding-bottom: 20px"
+      class="footer text-center text-lg-start bg-light"
+    >
+      <div>
+          Built By
+        <a href="https://twitter.com/zach_nussbaum" class="text-blue"
+          >Zach Nussbaum</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
