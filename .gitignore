@@ -1,3 +1,9 @@
+.vscode
+*.csv
+**data**
+movie_rec/static/covers
+
+.DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
